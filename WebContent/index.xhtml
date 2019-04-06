@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Calculator</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=0.8"/>
+<h:outputStylesheet library="css" name="style.css"  />
+
+</h:head>
+
+<body>
+
+	<h:form action="CalculatorServlet">
+		<div class="container">
+			<table>
+				<tr>
+					<td id="display" colspan="4"></td>
+							
+					<td><h:commandButton class="operation" id="c" name="btn" value="C" /></td>
+				</tr>
+				<tr>
+					<td><h:commandButton name="btn" value="7" /></td>
+					<td><h:commandButton name="btn" value="8" /></td>
+					<td><h:commandButton name="btn" value="9" /></td>
+					<td><h:commandButton class="operation" name="btn" value="/" /></td>
+					<td><h:commandButton class="operation" name="btn" value="sqrt" /></td>
+				</tr>
+				<tr>
+					<td><h:commandButton name="btn" value="4" /></td>
+					<td><h:commandButton name="btn" value="5" /></td>
+					<td><h:commandButton name="btn" value="6" /></td>
+					<td><h:commandButton class="operation" name="btn" value="*" /></td>
+					<td><h:commandButton class="operation" name="btn" value="%" /></td>
+				</tr>
+				<tr>
+					<td><h:commandButton name="btn" value="1" /></td>
+					<td><h:commandButton name="btn" value="2" /></td>
+					<td><h:commandButton name="btn" value="3" /></td>
+					<td><h:commandButton class="operation" name="btn" value="-" /></td>
+					<td rowspan="2"><h:commandButton class="operation" id="equals" name="btn" value="=" /></td>
+				</tr>
+				<tr>
+					<td><h:commandButton name="btn" value="0" /></td>
+					<td><h:commandButton name="btn" value="." /></td>
+					<td><h:commandButton name="btn" value="+/-" /></td>
+					<td><h:commandButton class="operation" name="btn" value="+" /></td>
+				</tr>
+			</table>
+		</div>
+
+	</h:form>
+
+</body>
+</html>
