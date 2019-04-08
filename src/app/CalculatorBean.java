@@ -1,24 +1,19 @@
 package app;
 
-import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-@ManagedBean
+@ManagedBean(name = "calculatorBean", eager = true)
 @SessionScoped
-public class Calculator {
+public class CalculatorBean {
 	private String operation;
-	private String result;
+	private String result = "bbb";
 	private String oldValue;
 	
-	public Calculator() {
-	}
-	
-	@PostConstruct
-	public void init() {
-		operation = "";
-		result = "";
-		oldValue = "";
+	public CalculatorBean() {
+		this.operation = "";
+		this.result = "";
+		this.oldValue = "";
 	}
 	
 	public String getOperation() {

@@ -15,13 +15,13 @@
 
 <body>
 
-	<h:form action="CalculatorServlet">
+	<h:form>
 		<div class="container">
 			<table>
 				<tr>
-					<td id="display" colspan="4"></td>
+					<td class="display" colspan="4"><h:outputText value="#{calculatorBean.result}" /></td>
 							
-					<td><h:commandButton class="operation" id="c" name="btn" value="C" /></td>
+					<td><h:commandButton class="operation c" name="btn" value="C" action="#{calculatorController.print('C')}"/></td>
 				</tr>
 				<tr>
 					<td><h:commandButton name="btn" value="7" /></td>
@@ -42,7 +42,7 @@
 					<td><h:commandButton name="btn" value="2" /></td>
 					<td><h:commandButton name="btn" value="3" /></td>
 					<td><h:commandButton class="operation" name="btn" value="-" /></td>
-					<td rowspan="2"><h:commandButton class="operation" id="equals" name="btn" value="=" /></td>
+					<td rowspan="2"><h:commandButton class="operation equals" name="btn" value="=" /></td>
 				</tr>
 				<tr>
 					<td><h:commandButton name="btn" value="0" /></td>
@@ -52,8 +52,20 @@
 				</tr>
 			</table>
 		</div>
+		
+		<table>
+			<tr>
+				<td class="display" colspan="4"><h:outputText value="#{calculatorBean.oldValue}" /></td>
+				<td class="display" colspan="4"><h:outputText value="#{calculatorBean.operation}" /></td>
+				<td class="display" colspan="4"><h:outputText value="#{calculatorBean.result}" /></td>
+			</tr>
+		</table>
+		
+		<h:inputText class="display" value="#{calculatorBean.result}"/>
 
 	</h:form>
+	
+	
 
 </body>
 </html>

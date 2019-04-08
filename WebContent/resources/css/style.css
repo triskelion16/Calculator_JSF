@@ -35,17 +35,19 @@ input:hover {
 	background: #666666;
 }
 
-#c {
+.c {
 	color: #FF6262;
 }
 
-#equals {
+.equals {
 	height: 9rem;
 }
 
-#display {
+.display {
 	border: 1px solid #000000;
 	color: #000000;
 	background: #ffffff;
 	border-radius: 10px;
+	height: 35px;
+	width: 150px;
 }
