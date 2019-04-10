@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Error</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=0.8"/>
+<h:outputStylesheet library="css" name="error.css"  />
+
+</h:head>
+
+<body>
+	<h4 class="container">JSF - Calculator</h4>
+
+	<h:form>
+		<div class="container">
+			<table>
+				<tr>
+					<td class="display" colspan="4"><h:outputText value="#{calculatorBean.result}" /></td>
+							
+					<td><h:commandButton class="operation c" value="C" action="#{calculatorController.execute('C')}"/></td>
+				</tr>
+				<tr>
+					<td><h:commandButton value="7"/></td>
+					<td><h:commandButton value="8"/></td>
+					<td><h:commandButton value="9"/></td>
+					<td><h:commandButton class="operation" value="/"/></td>
+					<td><h:commandButton class="operation" value="sqrt"/></td>
+				</tr>
+				<tr>
+					<td><h:commandButton value="4"/></td>
+					<td><h:commandButton value="5"/></td>
+					<td><h:commandButton value="6"/></td>
+					<td><h:commandButton class="operation" value="*"/></td>
+					<td><h:commandButton class="operation" value="%"/></td>
+				</tr>
+				<tr>
+					<td><h:commandButton value="1"/></td>
+					<td><h:commandButton value="2"/></td>
+					<td><h:commandButton value="3"/></td>
+					<td><h:commandButton class="operation" value="-"/></td>
+					<td rowspan="2"><h:commandButton class="operation equals" value="="/></td>
+				</tr>
+				<tr>
+					<td><h:commandButton value="0"/></td>
+					<td><h:commandButton value="."/></td>
+					<td><h:commandButton value="+/-"/></td>
+					<td><h:commandButton class="operation" value="+"/></td>
+				</tr>
+			</table>
+		</div>
+	</h:form>
+	
+</body>
+</html>

@@ -6,7 +6,7 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Calculator</title>
+<title>Calculator JSF</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=0.8"/>
 <h:outputStylesheet library="css" name="style.css"  />
@@ -14,6 +14,7 @@
 </h:head>
 
 <body>
+	<h4 class="container">JSF - Calculator</h4>
 
 	<h:form>
 		<div class="container">
@@ -21,51 +22,38 @@
 				<tr>
 					<td class="display" colspan="4"><h:outputText value="#{calculatorBean.result}" /></td>
 							
-					<td><h:commandButton class="operation c" name="btn" value="C" action="#{calculatorController.print('C')}"/></td>
+					<td><h:commandButton class="operation c" value="C" action="#{calculatorController.execute('C')}"/></td>
 				</tr>
 				<tr>
-					<td><h:commandButton name="btn" value="7" /></td>
-					<td><h:commandButton name="btn" value="8" /></td>
-					<td><h:commandButton name="btn" value="9" /></td>
-					<td><h:commandButton class="operation" name="btn" value="/" /></td>
-					<td><h:commandButton class="operation" name="btn" value="sqrt" /></td>
+					<td><h:commandButton value="7" action="#{calculatorController.execute('7')}"/></td>
+					<td><h:commandButton value="8" action="#{calculatorController.execute('8')}"/></td>
+					<td><h:commandButton value="9" action="#{calculatorController.execute('9')}"/></td>
+					<td><h:commandButton class="operation" value="/" action="#{calculatorController.execute('/')}"/></td>
+					<td><h:commandButton class="operation" value="sqrt" action="#{calculatorController.execute('sqrt')}"/></td>
 				</tr>
 				<tr>
-					<td><h:commandButton name="btn" value="4" /></td>
-					<td><h:commandButton name="btn" value="5" /></td>
-					<td><h:commandButton name="btn" value="6" /></td>
-					<td><h:commandButton class="operation" name="btn" value="*" /></td>
-					<td><h:commandButton class="operation" name="btn" value="%" /></td>
+					<td><h:commandButton value="4" action="#{calculatorController.execute('4')}"/></td>
+					<td><h:commandButton value="5" action="#{calculatorController.execute('5')}"/></td>
+					<td><h:commandButton value="6" action="#{calculatorController.execute('6')}"/></td>
+					<td><h:commandButton class="operation" value="*" action="#{calculatorController.execute('*')}"/></td>
+					<td><h:commandButton class="operation" value="%" action="#{calculatorController.execute('%')}"/></td>
 				</tr>
 				<tr>
-					<td><h:commandButton name="btn" value="1" /></td>
-					<td><h:commandButton name="btn" value="2" /></td>
-					<td><h:commandButton name="btn" value="3" /></td>
-					<td><h:commandButton class="operation" name="btn" value="-" /></td>
-					<td rowspan="2"><h:commandButton class="operation equals" name="btn" value="=" /></td>
+					<td><h:commandButton value="1" action="#{calculatorController.execute('1')}"/></td>
+					<td><h:commandButton value="2" action="#{calculatorController.execute('2')}"/></td>
+					<td><h:commandButton value="3" action="#{calculatorController.execute('3')}"/></td>
+					<td><h:commandButton class="operation" value="-" action="#{calculatorController.execute('-')}"/></td>
+					<td rowspan="2"><h:commandButton class="operation equals" value="=" action="#{calculatorController.execute('=')}"/></td>
 				</tr>
 				<tr>
-					<td><h:commandButton name="btn" value="0" /></td>
-					<td><h:commandButton name="btn" value="." /></td>
-					<td><h:commandButton name="btn" value="+/-" /></td>
-					<td><h:commandButton class="operation" name="btn" value="+" /></td>
+					<td><h:commandButton value="0" action="#{calculatorController.execute('0')}"/></td>
+					<td><h:commandButton value="." action="#{calculatorController.execute('.')}"/></td>
+					<td><h:commandButton value="+/-" action="#{calculatorController.execute('+/-')}"/></td>
+					<td><h:commandButton class="operation" value="+" action="#{calculatorController.execute('+')}"/></td>
 				</tr>
 			</table>
 		</div>
-		
-		<table>
-			<tr>
-				<td class="display" colspan="4"><h:outputText value="#{calculatorBean.oldValue}" /></td>
-				<td class="display" colspan="4"><h:outputText value="#{calculatorBean.operation}" /></td>
-				<td class="display" colspan="4"><h:outputText value="#{calculatorBean.result}" /></td>
-			</tr>
-		</table>
-		
-		<h:inputText class="display" value="#{calculatorBean.result}"/>
-
 	</h:form>
 	
-	
-
 </body>
 </html>

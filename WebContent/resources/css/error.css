@@ -27,16 +27,16 @@ input {
 	border: 1px solid #ffffff;
 }
 
-#c {
+.c {
 	color: red;
 	background: #666666;
 }
 
-#equals {
+.equals {
 	height: 9rem;
 }
 
-#display {
+.display {
 	border: 1px solid #000000;
 	color: #000000;
 	background: #ffffff;

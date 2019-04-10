@@ -7,7 +7,7 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class CalculatorBean {
 	private String operation;
-	private String result = "bbb";
+	private String result;
 	private String oldValue;
 	
 	public CalculatorBean() {
