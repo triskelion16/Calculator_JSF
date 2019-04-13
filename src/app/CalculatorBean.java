@@ -9,11 +9,15 @@ public class CalculatorBean {
 	private String operation;
 	private String result;
 	private String oldValue;
+	private String cssColor;
+	private String cssError;
 	
 	public CalculatorBean() {
 		this.operation = "";
 		this.result = "";
 		this.oldValue = "";
+		this.cssColor = "dark.css";
+		this.cssError = "errorDark.css";
 	}
 	
 	public String getOperation() {
@@ -36,4 +40,19 @@ public class CalculatorBean {
 	public void setOldValue(String oldValue) {
 		this.oldValue = oldValue;
 	}
+
+	public String getCssColor() {
+		return cssColor;
+	}
+	public void setCssColor(String cssColor) {
+		this.cssColor = cssColor;
+	}
+
+	public String getCssError() {
+		return cssError;
+	}
+	public void setCssError(String cssError) {
+		this.cssError = cssError;
+	}
+	
 }

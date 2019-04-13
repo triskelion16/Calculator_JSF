@@ -1,13 +1,13 @@
 
 body {
-	background-color: #111111;
+	background-color: #eeeeee;
 	font-size: 2em;
-	color: #111111;
+	color: #eeeeee;
 }
 
 .container {
-	background: #B2D3F0;
-	border: 1px solid #ffffff;
+	background: #8A2BE2;
+	border: 1px solid #111111;
 	width: 24rem;
 	display: flex;
 	margin: auto;
@@ -18,21 +18,21 @@ body {
 }
 
 input {
-	background: #888888;
+	background: #eeeeee;
 	font-size: 2rem;
 	width: 4.5rem;
 	height: 4.5rem;
-	color: #ffffff;
+	color: #111111;
 	border-radius: 10px;
-	border: 1px solid #ffffff;
+	border: 1px solid #111111;
 }
 
 input:hover {
-	border: 2px solid #ffffff;
+	border: 2px solid #111111;
 }
 
 .operation {
-	background: #666666;
+	background: #cccccc;
 }
 
 .c {
@@ -48,4 +48,15 @@ input:hover {
 	color: #000000;
 	background: #ffffff;
 	border-radius: 10px;
+}
+
+.text {
+	display: flex;
+	margin: auto;
+	background: #eeeeee;
+	color: #111111;
+	border: 1px solid #111111;
+	height: 1.5rem;
+	width: 8rem;
+	font-size: 14px;
 }

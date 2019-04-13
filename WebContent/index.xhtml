@@ -9,7 +9,7 @@
 <title>Calculator JSF</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=0.8"/>
-<h:outputStylesheet library="css" name="style.css"  />
+<h:outputStylesheet library="css" name="#{calculatorBean.cssColor}"  />
 
 </h:head>
 
@@ -53,7 +53,12 @@
 				</tr>
 			</table>
 		</div>
+		
+		<br/>
+		<h:commandButton class="text" value="Zmień ustawienia" action="changeForm"/>
 	</h:form>
+	
+	
 	
 </body>
 </html>

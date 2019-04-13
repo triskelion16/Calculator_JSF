@@ -11,6 +11,20 @@ public class CalculatorController {
 	@ManagedProperty(value = "#{calculatorBean}")
 	private CalculatorBean calculatorBean;
 	private boolean newNumber = false;
+	
+	public String changeColor(String color) {
+		
+		if("dark".equals(color)) {
+			calculatorBean.setCssColor("dark.css");
+			calculatorBean.setCssError("errorDark.css");
+		}
+		if("bright".equals(color)) {
+			calculatorBean.setCssColor("bright.css");
+			calculatorBean.setCssError("errorBright.css");
+		}
+		
+		return "index";
+	}
 
 	public String execute(String button) {
 		if (button != null) {
